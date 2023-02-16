@@ -1,5 +1,7 @@
 # tfl_crowding_public_demo
 
+This project leverages TfL's oyster card tap in/out data where they've modelled out passenger loads throughout each station on the network at 15 minute intervals throughout each day of the week. I used the TfL API to retrieve train timetables in order to generate a 'crowdedness' percentage, as well as to calculate averaged travel times between links (a pair of adjacent stations). I then reconstructed the TfL transportation network as a graph, and added crowding and travel time as edge weights. The graph solves for the shortest path between origin A and destination B based on minimising crowding, subject to certain restrictions around excess travel time (relative to the fastest route). This way it tries to strike a balance between a more comfortable journey, without resorting to taking circular routes that are twice as long.
+
 Example of Crowding Activity for a Station
 ![Crowding Activity for a Station](https://github.com/MochiYoshi/tfl_crowding_public_demo/blob/main/tfl_crowding_app_example.jpg?raw=true)
 
